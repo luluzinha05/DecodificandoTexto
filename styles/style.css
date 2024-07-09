@@ -1,0 +1,153 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@100..900&display=swap');
+
+*  {
+    margin: 0%;
+    padding: 0%;
+}
+
+:root {
+    --cor-primaria: #483D8B;
+    --cor-secundaria: #0A3871;
+    --cor-fundo: #DCDCDC;
+    --cor-branco: white;
+    --fonte-inter: "Inter", sans-serif;
+}
+
+body {
+    height: 100vh;
+    box-sizing: border-box;
+    background: rgb(0,250,154);
+    background: linear-gradient(90deg, rgba(0,250,154,1) 0%, rgba(0,255,127,1) 35%, rgba(0,255,0,1) 100%);
+    color: black;
+    position: relative; /* Adicionado para que os elementos absolutos sejam relativos ao body */
+}
+
+.cabecalho {
+    padding: 2% 1%;
+}
+ 
+.apresentacao {
+    display: flex;
+    justify-content: space-between;
+}
+
+.conteudo {
+    padding: 5% 15%;
+    font-family: var(--fonte-inter); border-radius: 32px; /* Alterado para usar zeros sem px */
+}
+
+.titulo {
+    font-family: var(--fonte-inter);
+    font-size: 32px;
+}
+
+#input-placeholder {
+    border: none; /* Remove qualquer borda */
+    outline: none; /* Remove o contorno ao clicar */
+    background: none; /* Remove o fundo */
+    padding: 0; /* Remove o padding */
+    margin: 0; /* Remove o margin */
+    font-size: 32px;
+    font-family: var(--fonte-inter);
+}
+
+
+.paragrafo {
+    margin-top: 300px;
+    display: flex;
+    gap: 5px;
+}
+
+.botoes {
+    margin-top: 20px;
+    display: flex;
+    align-items: center;
+    gap: 15px;
+}
+
+.botao1, .botao2 {
+    width: 300px;
+    height: 67px;
+    text-decoration: none;
+    text-transform: uppercase;
+    font-family: var(--fonte-inter);
+    font-size: 16px;
+    text-align: center;
+    color: black;
+    border: 1px solid black;
+    border-radius: 32px;
+    transition: all 0.2s ease-in-out;
+    position: relative; /* Adicionado para controlar o efeito shine */
+    overflow: hidden; /* Adicionado para controlar o efeito shine */
+}
+
+.botao1:hover, .botao2:hover {
+    color: white;
+    background-color: var(--cor-secundaria);
+    border-color: black;
+}
+
+.botao1:before, .botao2:before {
+    content: "";
+    display: block;
+    width: 0px;
+    height: 86%;
+    position: absolute;
+    top: 7%;
+    left: 0%;
+    opacity: 0;
+    background: white;
+    box-shadow: 0 0 15px 3px white;
+    transform: skewX(-20deg);
+    transition: all 0.5s ease-in-out; /* Adicionado para controlar o efeito shine */
+}
+
+.apresentacao-texto {  
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    width: 400px;
+    height: 650px;
+    position: absolute; /* Adicionado para posicionamento absoluto */
+    top: 40px;
+    left: 1000px;
+    border-radius: 32px; /* Alterado para usar zeros sem px */
+    border: 3px solid black; /* Largura de 1px, estilo sólido, cor preta */
+    
+}
+
+.titulo2 {
+    font-family: var(--fonte-inter);
+    font-size: 24px;
+    width: 336px;
+    height: 70px;
+}
+
+.titulo3 {
+    font-family: var(--fonte-inter);
+    font-size: 16px;
+    width: 336px;
+    height: 48px;
+}
+
+#outputTextSaida {
+    font-family: var(--fonte-inter);
+    font-size: 32px;
+    
+}
+
+.resultado {
+    margin-top: 20px;
+    padding: 10px;
+    background-color: var(--cor-branco);
+    border-radius: 10px;
+    border: 1px solid var(--cor-secundaria);
+    width: 100%;
+    max-width: 600px;
+}
+
+.hidden {
+    display: none;
+}
